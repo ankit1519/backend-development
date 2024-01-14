@@ -14,7 +14,7 @@ const server=http.createServer((req,res)=>{
     //console.log(req.url);
     console.log('server started');
     if(req.url.startsWith('/product')){
-        console.log(req.url);
+        console.log(req.url, req.method);
         const id=req.url.split('/')[2];
         //console.log(id);
         const prd=product.find(pr=>pr.id=== (+id));
